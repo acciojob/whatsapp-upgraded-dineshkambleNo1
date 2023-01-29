@@ -58,7 +58,7 @@ public class WhatsappService {
     public int sendMessage(Message message, User sender, Group group) throws Exception {
 
         if(!groupMap.containsKey(group)){
-            throw new Exception("Group does not exists ");
+            throw new Exception("Group does not exist");
         }
 
         boolean isSenderExists = false;
