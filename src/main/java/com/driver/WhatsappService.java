@@ -38,7 +38,7 @@ public class WhatsappService {
         }
 
 
-        Group group=new Group("Group : "+ (groupCount + 1),userList.size());
+        Group group=new Group("Group "+ (groupCount + 1),userList.size());
         groupMap.put(group,userList);
         return group;
  }
