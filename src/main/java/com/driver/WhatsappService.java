@@ -38,7 +38,7 @@ public class WhatsappService {
         }
 
 
-        Group group=new Group("Group "+ (groupCount + 1),userList.size());
+        Group group=new Group("Group "+ ++groupCount,userList.size());
         groupMap.put(group,userList);
         return group;
  }
@@ -47,7 +47,7 @@ public class WhatsappService {
     public int createMessage(String content)
     {
 
-        Message message=new Message((++messageCount),content);
+        Message message=new Message(++messageCount,content);
         message.setTimestamp(new Date());
         messageList.add(message);
         return messageCount;
@@ -100,7 +100,7 @@ public class WhatsappService {
 
         if(!groupMap.containsKey(group))
         {
-            throw new Exception("Group does not exists");
+            throw new Exception("Group does not exist");
         }
 
         User pastAdmin = groupMap.get(group).get(0);
